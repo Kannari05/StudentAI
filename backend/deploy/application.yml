@@ -1,0 +1,45 @@
+server:
+  port: ${PORT:8080}
+spring:
+  application:
+    name: studentai-backend
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    hikari:
+      maximum-pool-size: 5
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+  mail:
+    host: ${SMTP_HOST}
+    port: ${SMTP_PORT:2525}
+    username: ${SMTP_USERNAME}
+    password: ${SMTP_PASSWORD}
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+      mail.smtp.starttls.required: true
+      mail.smtp.connectiontimeout: 10000
+      mail.smtp.timeout: 10000
+      mail.smtp.writetimeout: 10000
+app:
+  otp:
+    from: ${SMTP_FROM}
+  jwt:
+    secret: ${JWT_SECRET}
+    expiration-ms: 86400000
+groq:
+  api-key: ${GROQ_API_KEY}
+  model: ${GROQ_MODEL:openai/gpt-oss-120b}
+  base-url: https://api.groq.com/openai/v1
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  health:
+    redis:
+      enabled: false
