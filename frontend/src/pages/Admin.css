@@ -1,0 +1,66 @@
+.admin-page {
+  background:
+    radial-gradient(circle at top left, rgba(129, 140, 248, 0.16), transparent 32%),
+    linear-gradient(135deg, #020617 0%, #0f172a 100%);
+  color: #f8fafc;
+}
+
+.admin-header {
+  background: rgba(15, 23, 42, 0.92);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+  backdrop-filter: blur(12px);
+}
+
+.admin-header-content h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.35rem;
+}
+
+.admin-header-content p {
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+.admin-main {
+  position: relative;
+}
+
+.admin-tabs {
+  background: rgba(15, 23, 42, 0.82);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: 0 12px 32px rgba(2, 6, 23, 0.28);
+}
+
+.admin-tab-button {
+  border: 1px solid transparent;
+  transition: all 180ms ease;
+  font-weight: 600;
+}
+
+.admin-tab-button:hover {
+  background: rgba(30, 41, 59, 0.9);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.admin-tab-button.active {
+  background: linear-gradient(135deg, #dc2626, #be123c);
+  color: #ffffff;
+  box-shadow: 0 8px 18px rgba(190, 18, 60, 0.24);
+}
+
+.admin-panel-card {
+  background: rgba(15, 23, 42, 0.82);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  box-shadow: 0 18px 40px rgba(2, 6, 23, 0.22);
+  border-radius: 1rem;
+}
+
+.admin-loading-state {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 1rem;
+  box-shadow: 0 14px 30px rgba(2, 6, 23, 0.18);
+}
